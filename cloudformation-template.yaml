@@ -125,7 +125,7 @@ Resources:
       IpProtocol: tcp
       FromPort: '22'
       ToPort: '22'
-      CidrIp: 0.0.0.0/0
+      CidrIp: 120.148.18.26/32
 
   SgAllTrafficports:
     Type: AWS::EC2::SecurityGroupIngress
@@ -357,7 +357,6 @@ Resources:
       - Key: Name
         Value:
           Fn::Sub: EC2ContainerService-${EcsCluster}
-        PropagateAtLaunch: true
         PropagateAtLaunch: true
       - Key: Creator
         Value:
@@ -764,7 +763,7 @@ Resources:
       IpProtocol: tcp
       FromPort: '80'
       ToPort: '80'
-      CidrIp: 0.0.0.0/0
+      CidrIp: 120.148.18.26/32
 
   EcsSecurityGroupHTTPSinbound:
     Type: AWS::EC2::SecurityGroupIngress
@@ -773,7 +772,7 @@ Resources:
       IpProtocol: tcp
       FromPort: '443'
       ToPort: '443'
-      CidrIp: 0.0.0.0/0
+      CidrIp: 120.148.18.26/32
 
   EcsSecurityGroupECSAllTrafficports:
     Type: AWS::EC2::SecurityGroupIngress
